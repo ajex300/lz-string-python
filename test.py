@@ -53,3 +53,16 @@ if __name__ == '__main__':
 
     print('Decompress json from base64:')
     pprint.pprint(json.loads(x.decompressFromBase64(jsLzStringBase64Json)))
+
+    print('Compress json to utf16:')
+    jsLzStringUTF16 = x.compressToUTF16(jsonString)
+    print('result:    ' + jsLzStringUTF16)
+    print()
+    print('Decompress json from utf16:')
+    jresult = x.decompressFromUTF16(jsLzStringUTF16)
+    print('result:    ' + jresult)
+    print()
+    print('expected result: ' + jsonString)
+    print()
+    print('equals: ' + str(jresult == jsonString))
+
